@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_Home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_ChucNang"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Chức năng" />
+
+    <item
+        android:id="@+id/navigation_User"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:checked="true"
+        android:title="User" />
+
+</menu>

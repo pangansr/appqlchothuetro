@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timkiemp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ui.function.TimKiem">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="20dp"
+            android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="80dp"
+               android:padding="7dp"
+               android:layout_height="40dp"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:background="#0CB606"
+               android:layout_marginRight="40dp"
+            android:text="Giá: "/>
+            <EditText
+                android:id="@+id/edtgia"
+                android:textSize="15dp"
+                android:layout_width="80dp"
+                android:inputType="number"
+                android:layout_height="40dp"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="VND"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="80dp"
+                android:padding="7dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:background="#0CB606"
+                android:layout_marginRight="40dp"
+                android:text="Diện tích: "/>
+            <EditText
+                android:id="@+id/edtdientich"
+                android:inputType="number"
+                android:textSize="15dp"
+                android:layout_width="80dp"
+                android:layout_height="40dp"/>
+            <TextView
+                android:layout_width="30"
+                android:layout_height="40dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="m2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="7dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:background="#0CB606"
+                android:layout_marginRight="40dp"
+                android:text="Loại nhà: "/>
+            <Spinner
+                android:id="@+id/sploainha"
+                android:layout_width="110dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/btntiemkiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#61D554"
+        android:gravity="center"
+        android:text="Tìm kiếm" />
+</LinearLayout>
