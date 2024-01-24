@@ -19,8 +19,8 @@ public class EditInfomation extends AppCompatActivity {
     private ActivityEditInfomationBinding binding;
     static  int b = R.drawable.user;
     static Uri  selectedImageUri;
-    static  String username="UserName";
-    static  String SDT="sdt";
+    static  String username;
+    static  String SDT;
     private static final int PICK_IMAGE_REQUEST = 1;
 
     private AppCompatImageView imageView;
@@ -33,6 +33,8 @@ public class EditInfomation extends AppCompatActivity {
     }
 
     private void setEvent() {
+        username = binding.edtUserName.getText().toString();
+        SDT = binding.edtSDT.getText().toString();
         binding.a1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,18 +84,11 @@ public class EditInfomation extends AppCompatActivity {
                 b = -1;
             }
         });
-            if (binding.edtUserName.getText()!=null){
-                username = binding.edtUserName.getText().toString();
 
-            }
-            if (binding.edtSDT.getText()!=null){
-                SDT = binding.edtSDT.getText().toString();
-
-            }
             binding.btnXacNhan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    finish();
+                   onBackPressed();
                 }
             });
     }

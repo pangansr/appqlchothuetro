@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/maunen"
     android:orientation="vertical"
     tools:context=".ui.gallery.GalleryFragment">
     <ScrollView
@@ -72,6 +73,7 @@
         android:text="tham gia nhóm để nhận thông báo"/>
 
  <ImageView
+
     android:layout_width="match_parent"
     android:paddingVertical="15dp"
     android:layout_height="wrap_content"
@@ -83,6 +85,7 @@
         android:text="Xem nhà chế độ 3d"/>
 
             <ImageView
+                android:id="@+id/ivmap"
                 android:layout_width="match_parent"
                 android:layout_height="138dp"
                 android:background="@drawable/maunav"

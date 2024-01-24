@@ -28,9 +28,8 @@ public class KetNoiPhuongTien extends AppCompatActivity {
                 // Số điện thoại bạn muốn gọi
 
                 Random random = new Random();
-              //  String[] danhSachChuoi = {"0889213537", "0384353091", "0345443020"};
-                String[] danhSachChuoi = {"0123444444", "08998989", "065465" +
-                        ""};
+              String[] danhSachChuoi = {"0889213537", "0384353091", "0345443020"};
+              //  String[] danhSachChuoi = {"0123444444", "08998989", "065465"};
                 int index = random.nextInt(danhSachChuoi.length);
                 String soDienThoai = "tel:"+ danhSachChuoi[index];
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

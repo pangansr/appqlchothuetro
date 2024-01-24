@@ -15,7 +15,7 @@ import android.net.Uri;
 public class TimKiem extends AppCompatActivity {
 
     Button btnTimKiem;
-    EditText edtGia, edtDT, edtGioGiac;
+    EditText edtGia, edtDT;
     Spinner spLoaiNha;
     ArrayAdapter<String> adapter;
     String loaiNha="";
@@ -32,7 +32,6 @@ public class TimKiem extends AppCompatActivity {
         edtDT = findViewById(R.id.edtdientich);
         edtGia = findViewById(R.id.edtgia);
         spLoaiNha = findViewById(R.id.sploainha);
-        edtGioGiac = findViewById(R.id.edtgiogiac);
         String[] data = {"Phòng trọ, nhà trọ", "Nhà thuê nguyên căn", "Căn hộ", "Mặt bằng, văn phòng"};
          adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
 

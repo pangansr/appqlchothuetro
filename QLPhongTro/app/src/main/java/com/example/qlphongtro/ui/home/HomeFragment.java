@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
        }else {
            binding.ivAnh.setImageResource(EditInfomation.b);
        }
-       binding.tvSDT.setText(EditInfomation.username);
+       binding.tvTen.setText("77777");
        binding.tvSDT.setText(EditInfomation.SDT);
     }
     @Override

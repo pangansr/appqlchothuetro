@@ -69,42 +69,42 @@ public class MainActivity extends AppCompatActivity {
         menuItemHome.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.app_bar_main, new HomeFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new HomeFragment()).commit();
                 return true;
             }
         });
         menuItemChucNang.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.app_bar_main, new GalleryFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new GalleryFragment()).commit();
                 return true;
             }
         });
         menuItemUser.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.app_bar_main, new SlideshowFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new SlideshowFragment()).commit();
                 return true;
             }
         });
         menuItemHomeNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.app_bar_main, new HomeFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new HomeFragment()).commit();
                 return true;
             }
         });
         menuItemChucNangNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.app_bar_main, new GalleryFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new GalleryFragment()).commit();
                 return true;
             }
         });
         menuItemUserNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.app_bar_main, new SlideshowFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new SlideshowFragment()).commit();
                 return true;
             }
         });

@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.qlphongtro.MainActivity;
 import com.example.qlphongtro.databinding.FragmentFunctionBinding;
 import com.example.qlphongtro.ui.function.KetNoiPhuongTien;
+import com.example.qlphongtro.ui.function.Map;
 import com.example.qlphongtro.ui.function.TimKiem;
 
 public class GalleryFragment extends Fragment {
@@ -34,6 +35,13 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity(), KetNoiPhuongTien.class) ;
+                startActivity(intent);
+            }
+        });
+        binding.ivmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(), Map.class) ;
                 startActivity(intent);
             }
         });
