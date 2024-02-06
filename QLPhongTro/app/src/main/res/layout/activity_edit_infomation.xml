@@ -6,14 +6,17 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ui.home.EditInfomation">
+
     <ImageView
-        android:layout_margin="15dp"
+        android:layout_gravity="center"
         android:id="@+id/ivAnh"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/user"
-        />
+        android:layout_width="128dp"
+        android:layout_height="129dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/maunen"
+        android:src="@drawable/user" />
 <Button
+    android:layout_gravity="center"
     android:layout_margin="15dp"
     android:id="@+id/btnLayAnh"
     android:layout_width="wrap_content"
@@ -23,51 +26,68 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ảnh sẵn có"/>
+
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/a1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/nam"
-            android:layout_margin="10dp"/>
-    <ImageView
-        android:id="@+id/a2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/nam1"
-        android:layout_margin="10dp"/>
-    <ImageView
-        android:id="@+id/a3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/buoc"
-        android:layout_margin="10dp"/>
-    <ImageView
-        android:id="@+id/a4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/buoc1"
-        android:layout_margin="10dp"/>
-    <ImageView
-        android:id="@+id/a5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/tam"
-        android:layout_margin="10dp"/>
-    <ImageView
-        android:id="@+id/a6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/tam1"
-        android:layout_margin="10dp"/>
-</LinearLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/a1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/nam" />
+
+            <ImageView
+                android:id="@+id/a2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/nam1" />
+
+            <ImageView
+                android:id="@+id/a3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/buoc" />
+
+            <ImageView
+                android:id="@+id/a4"
+                android:layout_width="44dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/buoc1" />
+
+            <ImageView
+                android:id="@+id/a5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tam" />
+
+            <ImageView
+                android:id="@+id/a6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tam1" />
+
+            <ImageView
+                android:id="@+id/aư6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tam1" />
+
+        </LinearLayout>
     </ScrollView>
+
     <TextView
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
@@ -83,7 +103,6 @@
         android:text="Số điện thoại"/>
     <EditText
         android:id="@+id/edtSDT"
-        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <Button
@@ -92,4 +111,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Xác nhận"/>
+
 </LinearLayout>

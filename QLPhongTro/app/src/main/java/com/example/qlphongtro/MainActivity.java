@@ -1,6 +1,8 @@
 package com.example.qlphongtro;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.MenuItem;
@@ -13,9 +15,14 @@ import com.example.qlphongtro.ui.gallery.GalleryFragment;
 import com.example.qlphongtro.ui.home.HomeFragment;
 import com.example.qlphongtro.ui.slideshow.SlideshowFragment;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -50,22 +57,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
               // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-               Toast.makeText(MainActivity.this, "dddd", Toast.LENGTH_SHORT).show();
+//               Toast.makeText(MainActivity.this, "dddd", Toast.LENGTH_SHORT).show();
+                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                DatabaseReference databaseReference2 = firebaseDatabase.getReference("Students/name");
+
+                databaseReference2.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        // Xóa dữ liệu thành công
+                        Toast.makeText(getApplicationContext(), "Xóa dữ liệu thành công", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Xóa dữ liệu thất bại
+                        Toast.makeText(getApplicationContext(), "Xóa dữ liệu thất bại", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
-        DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
+      //  DrawerLayout drawer = binding.drawerLayout;
+       // NavigationView navigationView = binding.navView;
 
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow).setOpenableLayout(drawer).build();
-         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+//        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow).setOpenableLayout(drawer).build();
+//         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+//        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+//        NavigationUI.setupWithNavController(navigationView, navController);
 
     }
 
     private void setEvent() {
-        mediaPlayer = MediaPlayer.create(this, R.raw.nhacnen);
-        mediaPlayer.start();
+        //mediaPlayer = MediaPlayer.create(this, R.raw.nhacnen);
+        //mediaPlayer.start();
         menuItemHome.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem item) {
@@ -87,27 +110,27 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-        menuItemHomeNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new HomeFragment()).commit();
-                return true;
-            }
-        });
-        menuItemChucNangNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new GalleryFragment()).commit();
-                return true;
-            }
-        });
-        menuItemUserNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(@NonNull MenuItem item) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new SlideshowFragment()).commit();
-                return true;
-            }
-        });
+//        menuItemHomeNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(@NonNull MenuItem item) {
+//                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new HomeFragment()).commit();
+//                return true;
+//            }
+//        });
+//        menuItemChucNangNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(@NonNull MenuItem item) {
+//                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new GalleryFragment()).commit();
+//                return true;
+//            }
+//        });
+//        menuItemUserNav.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(@NonNull MenuItem item) {
+//                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new SlideshowFragment()).commit();
+//                return true;
+//            }
+//        });
     }
 
     private void setControl() {
@@ -115,19 +138,12 @@ public class MainActivity extends AppCompatActivity {
          menuItemHome = menu.findItem(R.id.navigation_Home);
          menuItemChucNang = menu.findItem(R.id.navigation_ChucNang);
          menuItemUser = menu.findItem(R.id.navigation_User);
-         Menu menu1 = binding.navView.getMenu();
-        menuItemHomeNav = menu1.findItem(R.id.nav_home);
-        menuItemChucNangNav = menu1.findItem(R.id.nav_gallery);
-        menuItemUserNav = menu1.findItem(R.id.nav_slideshow);
+         //Menu menu1 = binding.navView.getMenu();
+//        menuItemHomeNav = menu1.findItem(R.id.nav_home);
+//        menuItemChucNangNav = menu1.findItem(R.id.nav_gallery);
+//        menuItemUserNav = menu1.findItem(R.id.nav_slideshow);
 
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
 
 }

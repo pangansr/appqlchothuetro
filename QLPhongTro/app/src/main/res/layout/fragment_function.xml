@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginVertical="40dp">
+        android:layout_marginVertical="55dp">
         <LinearLayout
             android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
@@ -25,43 +25,14 @@
                 android:paddingVertical="15dp"
                 android:src="@drawable/timtro" />
     <TextView
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tìm kiếm chỗ ở"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="144dp"
-                android:background="@drawable/maunav"
-                android:paddingVertical="15dp"
-                android:src="@drawable/post" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Đăng thông tin thuê nhà trọ"/>
 
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="131dp"
-                android:background="@drawable/maunav"
-                android:paddingVertical="15dp"
-                android:src="@drawable/review" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="đánh giá nhà trọ"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="139dp"
-                android:background="@drawable/maunav"
-                android:paddingVertical="15dp"
-                android:src="@drawable/landlord" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tương tác giữa người thuê nhà và chủ nhà"/>    <ImageView
+    <ImageView
+     android:id="@+id/ivGropChat"
     android:layout_width="match_parent"
     android:paddingVertical="15dp"
     android:layout_height="wrap_content"
@@ -69,20 +40,9 @@
     android:src="@drawable/group" />
     <TextView
         android:layout_width="match_parent"
+        android:gravity="center"
         android:layout_height="wrap_content"
         android:text="tham gia nhóm để nhận thông báo"/>
-
- <ImageView
-
-    android:layout_width="match_parent"
-    android:paddingVertical="15dp"
-    android:layout_height="wrap_content"
-    android:background="@drawable/maunav"
-    android:src="@drawable/view3d" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Xem nhà chế độ 3d"/>
 
             <ImageView
                 android:id="@+id/ivmap"
@@ -95,18 +55,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Xác định vị trí và tìm kiếm các tiện ích gần khu vực"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="138dp"
-                android:background="@drawable/maunav"
-                android:paddingVertical="15dp"
-                android:src="@drawable/phongthuy" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="tư vấn phong thủy thông qua trí tuệ nhân tạo AI"/>
             <ImageView
                 android:id="@+id/ivPhuongTien"
                 android:layout_width="match_parent"
@@ -117,9 +68,11 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:text="Kết nối với dịch vụ đưa đón"/>
             <ImageView
+                android:id="@+id/ivChatSK"
                 android:layout_width="match_parent"
                 android:layout_height="138dp"
                 android:background="@drawable/maunav"
@@ -129,7 +82,54 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Tư vấn sức khỏe"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:background="@drawable/maunav"
+                android:paddingVertical="15dp"
+                android:src="@drawable/post" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Đăng thông tin thuê nhà trọ"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:background="@drawable/maunav"
+                android:paddingVertical="15dp"
+                android:src="@drawable/phongthuy" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="tư vấn phong thủy thông qua trí tuệ nhân tạo AI"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="131dp"
+                android:background="@drawable/maunav"
+                android:paddingVertical="15dp"
+                android:src="@drawable/review" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="đánh giá nhà trọ"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                android:background="@drawable/maunav"
+                android:paddingVertical="15dp"
+                android:src="@drawable/landlord" />
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tương tác giữa người thuê nhà và chủ nhà"/>
         </LinearLayout>
 
     </ScrollView>
