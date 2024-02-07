@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
               // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 //               Toast.makeText(MainActivity.this, "dddd", Toast.LENGTH_SHORT).show();
                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-                DatabaseReference databaseReference2 = firebaseDatabase.getReference("Students/name");
+                DatabaseReference databaseReference2 = firebaseDatabase.getReference("Students      ");
 
                 databaseReference2.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
